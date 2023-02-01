@@ -4,12 +4,21 @@
     box-sizing: border-box;
 }
 
-.content-navbar {
-    width: 1200px;
-    
-}
-
 body {
     background-color: #1C2135;
+    color: white;
+}
+
+.content-navbar {
+    width: 1200px;
+    text: 
+}
+
+.content-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    margin: 0 auto;
 }
 
