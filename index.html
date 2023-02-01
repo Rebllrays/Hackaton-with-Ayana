@@ -27,18 +27,90 @@
             </ul>
             <div class="d-flex">
                 <ul class="navbar-nav me-auto mb-2 ">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                     </li>                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="#" 
+                        id="loginUser-modal"
+                        data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop">Login</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="showUsername">No User</a>
+                      </li>
+                    <li class="nav-item">
+                        <a
+                          class="nav-link"
+                          aria-current="page"
+                          href="#"
+                          id="logoutUser-btn"
+                          >Logout</a
+                        >
+                      </li>
+
 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Sign Up!</a>
+                        <a class="nav-link" href="#"                 
+                        id="registerUser-modal"
+                        data-bs-toggle="modal" 
+                        data-bs-target="#staticBackdrop"
+                        >Sign Up!</a>
                     </li>
                     </ul>
                 </ul>
             </div>
+
+            <!-- Modal for users  -->
+    <div
+    class="modal fade"
+    id="staticBackdrop"
+    data-bs-backdrop="static"
+    data-bs-keyboard="false"
+    tabindex="-1"
+    aria-labelledby="staticBackdropLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">
+            Account
+          </h1>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="modal-body">
+          <!-- for register user -->
+          <div class="d-flex flex-column w-100 align-items-center" id="registerUser-block">
+              <h2>Register</h2>
+              <input type="text" id="reg-username" placeholder="Username" class="mb-2 w-100 form-control">
+              <input type="text" id="reg-age" placeholder="Age" class="mb-2 w-100 form-control">
+              <input type="text" id="reg-password" placeholder="Password" class="mb-2 w-100 form-control">
+              <input type="text" id="reg-passwordConfirm" placeholder="Password Confirmation" class="mb-2 w-100 form-control">
+              <div>
+                  <input type="checkbox" id="isAdmin">
+                  <label for="isAdmin">Admin</label>
+              </div>
+          </div>
+          <!-- for login user -->
+          <div class="d-flex flex-column w-100 align-items-center" id="loginUser-block">
+              <h2>Login</h2>
+                  <input type="text" id="login-username" placeholder="Username" class="mb-2 w-100 form-control">
+                  <input type="text" id="login-password" placeholder="Password" class="mb-2 w-100 form-control">
+          </div>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-dark" id="registerUser-btn">Sign Up!</button>
+          <button type="button" class="btn btn-dark" id="loginUser-btn">Login</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 
 

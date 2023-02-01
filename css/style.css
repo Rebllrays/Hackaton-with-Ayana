@@ -1,6 +1,3 @@
-.navbar {
+body {
     background-color: #1C2135;
-    display: flex;
-    justify-content: space-between;
-    color: aliceblue;
 }
